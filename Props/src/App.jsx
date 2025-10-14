@@ -5,39 +5,36 @@ const App = () => {
 
     const users = [
   {
-    "name": "Aarav Mehta",
-    "age": 28,
+    "name": "Manish Kumar",
+    "age": 60,
     "city": "Mumbai",
-    "profession": "Software Engineer"
+    "profession": "Manager"
   },
   {
     "name": "Neha Sharma",
+    "age": 18,
+    "city": "Odisha",
+    "profession": "Frontend Developer"
+  },
+  {
+    "name": "Roshan Sharma",
+    "age": 20,
+    "city": "Jharkhand",
+    "profession": "Full-Stack Developer"
+  },
+  {
+    "name": "Ayush Kumar",
     "age": 25,
-    "city": "Delhi",
-    "profession": "UI/UX Designer"
-  },
-  {
-    "name": "Rohan Patel",
-    "age": 32,
-    "city": "Ahmedabad",
-    "profession": "Data Analyst"
-  },
-  {
-    "name": "Priya Singh",
-    "age": 29,
     "city": "Bangalore",
-    "profession": "Digital Marketer"
-  },
-  {
-    "name": "Vikram Das",
-    "age": 35,
-    "city": "Kolkata",
-    "profession": "Project Manager"
+    "profession": "UI/UX Designer"
   }
 ]
 
   return (
-    <div>
+    <div className='p-6'>
+      {users.map(function(elem,idx){
+        return <HeroSection key={idx} username={elem.name} age={elem.age} city={elem.city} prof={elem.profession}/>
+      })}
     </div>
   )
 }
